@@ -6,25 +6,25 @@ from django.db import models
 # Create your models here.
 from  django.db import models
 
-class Reader(models.Model):
+class User(models.Model):
     id = models.AutoField(primary_key=True, unique=True)
-    rname = models.CharField(max_length=20)
+    uname = models.CharField(max_length=20)
     psd = models.CharField(max_length=20)
 
     def __unicode__(self):
-        return u'Reader:%s %s' %(self.rname,self.psd)
-    class Meta:
-        db_table = 't_reader'
-
-
-class User(models.Model):
-    id = models.AutoField(primary_key=True,unique=True)
-    uname = models.CharField(max_length=20)
-    tel = models.CharField(max_length=20)
-    def __unicode__(self):
-        return u'User:%s%s'%(self.uname,self.tel)
+        return u'Reader:%s %s' %(self.uname,self.psd)
     class Meta:
         db_table = 't_user'
+
+
+class Reader(models.Model):
+    id = models.AutoField(primary_key=True,unique=True)
+    rname = models.CharField(max_length=20)
+    tel = models.CharField(max_length=20)
+    def __unicode__(self):
+        return u'User:%s%s'%(self.rname,self.tel)
+    class Meta:
+        db_table = 't_reader'
 
 class Type(models.Model):
     id = models.AutoField(primary_key=True,unique=True)
