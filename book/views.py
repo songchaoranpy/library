@@ -8,9 +8,9 @@ from django.shortcuts import render
 from book.models import User
 
 
-def book_view(request):
+def bookmanage_view(request):
 
-    return render(request, 'book.html')
+    return render(request, 'bookmanage.html')
 
 
 def login_view(request):
@@ -21,7 +21,7 @@ def login_view(request):
         lpwd = request.POST.get('lpwd','')
         count = User.objects.filter(uname=luname ,psd=lpwd).count()
         if count == 1:
-            return render(request,'book.html')
+            return render(request, 'bookmanage.html')
         else:
             return HttpResponse('321')
 
