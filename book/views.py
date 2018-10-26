@@ -15,7 +15,7 @@ def book_view(request):
 
 def login_view(request):
     if request.method == 'GET':
-        return render(request, 'login.html')
+        return render(request, 'bookmanage.html')
     else:
         luname = request.POST.get('luname','')
         lpwd = request.POST.get('lpwd','')
