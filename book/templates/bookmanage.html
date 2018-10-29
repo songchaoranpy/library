@@ -22,12 +22,12 @@
                        bordercolor="#FFFFFF" bordercolordark="#F6B83B"
                        bordercolorlight="#FFFFFF">
                     <tr align="center" bgcolor="#e3F4F7">
-                        <td width="12%" bgcolor="#F9D16B">编号</td>
-                        <td width="30%" bgcolor="#F9D16B">书名</td>
+                        <td width="8%" bgcolor="#F9D16B">编号</td>
+                        <td width="28%" bgcolor="#F9D16B">书名</td>
                         <td width="20%" bgcolor="#F9D16B">出版社</td>
                         <td width="14%" bgcolor="#F9D16B">作者</td>
-                        <td width="12%" bgcolor="#F9D16B">书籍类型</td>
-                        <td width="12%" bgcolor="#F9D16B">数量</td>
+                        <td width="22%" bgcolor="#F9D16B">书籍类型</td>
+                        <td width="8%" bgcolor="#F9D16B">数量</td>
                     </tr>
 
                     {% for book in books %}
@@ -36,7 +36,7 @@
                             <td style="padding:5px;">{{ book.bookname }}</td>
                             <td style="padding:5px;">&nbsp;{{ book.press }}</td>
                             <td style="padding:5px;">&nbsp;{{ book.author }}</td>
-                            <td style="padding:5px;">&nbsp;{{ book.type.0 }}</td>
+                            <td style="padding:5px;">&nbsp;{{ book.type }}</td>
                             <td style="padding:5px;">&nbsp;{{ book.count }}</td>
                         </tr>
                     {% endfor %}

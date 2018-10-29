@@ -1,4 +1,7 @@
-<html>
+{% extends 'base.html' %}
+
+
+{% block main %}
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <head>
     <title>图书馆管理系统</title>
@@ -19,7 +22,6 @@
     </script>
 </head>
 
-
 <body>
 <table width="778" border="0px " align="center" cellpadding="0" cellspacing="0" bgcolor="#F9D16B" class="tableBorder">
 
@@ -27,9 +29,9 @@
     <table width="100%" border="0px" cellspacing="0" cellpadding="0">
 
 
-        <form name="form1" method="post" action="login.html">
+        <form name="form1" method="post" action="bookmanage.html">
             {% csrf_token %}
-            <table width="100%" border="1px" cellpadding="0" cellspacing="0" bordercolorlight="#FFFFFF"
+            <table width="100%" border="0px" cellpadding="0px" cellspacing="0px" bordercolorlight="#FFFFFF"
                    bordercolordark="#D2E3E6">
                 <tr>
                     <td height="57">&nbsp;</td>
@@ -37,7 +39,7 @@
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td width="50%" height="37">&nbsp;</td>
+                    <td width="25%" height="37">&nbsp;</td>
                     <td width="10%">管理员名称：</td>
                     <td width="31%">
                         <input name="luname" type="text" class="logininput" id="luname" size="27"></td>
@@ -49,6 +51,9 @@
                     <td><input name="lpwd" type="password" class="logininput" id="lpwd" size="27"></td>
                     <td>&nbsp;</td>
                 </tr>
+                <tr height="20">
+
+                </tr>
                 <tr>
                     <td height="30">&nbsp;</td>
                     <td colspan="2" align="center">
@@ -56,13 +61,11 @@
                         &nbsp;
                         <input name="Submit3" type="reset" class="btn_grey" value="重置">&nbsp;
                         <input name="Submit2" type="button" class="btn_grey" value="关闭" onClick="window.close();"></td>
-
                 </tr>
             </table>
         </form>
-
-
     </table>
 </table>
 </body>
-</html>
+
+{% endblock %}

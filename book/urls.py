@@ -8,4 +8,5 @@ urlpatterns = [
     url(r'login/' ,views.login_view),
     url(r'bookmanage/', views.manage_view),
     url(r'readmanage/', views.reader_view),
+
 ]

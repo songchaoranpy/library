@@ -24,7 +24,7 @@ def login_view(request):
         if count == 1:
             return render(request, 'bookmanage.html')
         else:
-            return HttpResponse('321')
+            return render(request,'login.html')
 
 #图书管理
 def manage_view(request):
