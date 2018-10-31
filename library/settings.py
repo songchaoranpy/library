@@ -81,7 +81,7 @@ DATABASES = {
         'NAME': 'library',
         'USER':'root',
         'HOST':'127.0.0.1',
-        'PASSWORD':'123',
+        'PASSWORD':'04221X',
         'PORT':'3306',
     }
 }
@@ -128,5 +128,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static/css'),
     os.path.join(BASE_DIR,'static/js'),
-    os.path.join(BASE_DIR,'static/image')
+    os.path.join(BASE_DIR,'static/image'),
 ]
