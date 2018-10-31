@@ -51,7 +51,6 @@ class Book(models.Model):
         db_table = 't_book'
 
 
-
 #借书记录表
 class Record(models.Model):
 

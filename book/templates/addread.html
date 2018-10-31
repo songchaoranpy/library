@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+
+{% block main %}
+
+    <table width="99%" height="510" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF"
+           class="tableBorder_gray">
+        <tbody>
+        <tr>
+            <td height="510" valign="top" style="padding:5px;">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tbody>
+                    <tr>
+                        <td height="22" valign="top" class="word_orange">当前位置：读者管理 &gt; 添加读者 &gt;&gt;&gt;</td>
+                    </tr>
+                    <tr>
+                        <td align="center" valign="top">
+                            <form method="post" action="/addread/">
+                                {% csrf_token %}
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                <tr>
+                                    <td width="47%">&nbsp;</td>
+                                    <td width="13%">
+                                        <a href="/readmanage/">读者档案管理</a></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <table width="98%" border="1" cellpadding="0" cellspacing="0" bordercolor="#FFFFFF"
+                                   bordercolordark="#F6B83B" bordercolorlight="#FFFFFF">
+                                <tbody>
+                                <tr align="center" >
+                                    <td height="30">&nbsp;</td>
+                                    <td width="50%" bgcolor="#F9D16B">添&nbsp;加&nbsp;读&nbsp;者</td>
+                                    <td height="30">&nbsp;</td>
+                                </tr>
+                                <tr align="center" >
+                                    <td height="30">&nbsp;</td>
+                                    <td width="50%" bgcolor="#F9D16B">姓&nbsp;名：<input type="text" name="rname"></td>
+                                    <td height="30">&nbsp;</td>
+                                </tr>
+                                <tr align="center" >
+                                    <td height="30">&nbsp;</td>
+                                    <td width="50%" bgcolor="#F9D16B">电&nbsp;话：<input type="text" name="rtel" id=""></td>
+                                    <td height="30">&nbsp;</td>
+                                </tr>
+
+                                <tr align="center">
+                                    <td height="30">&nbsp;</td>
+                                    <td width="50%" bgcolor="#F9D16B">
+                                        <input type="submit" class="btn_grey" value="确定">&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <input name="Submit3" type="reset" class="btn_grey" value="取消">&nbsp;
+                                    </td>
+                                    <td height="30">&nbsp;</td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </form>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+
+{% endblock%}

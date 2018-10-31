@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 
+
+
 {% block main %}
+
     <table width="99%" height="510" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF"
            class="tableBorder_gray">
         <tbody>
@@ -18,32 +21,17 @@
                                 <tr>
                                     <td width="87%">&nbsp;</td>
                                     <td width="13%">
-                                        <a href="/addread/">添加读者信息</a></td>
+                                        <a href="/addtype/">添加图书类型</a></td>
                                 </tr>
                                 </tbody>
                             </table>
                             <table width="95%" border="1" cellpadding="0" cellspacing="0" bordercolor="#FFFFFF"
                                    bordercolordark="#F6B83B" bordercolorlight="#FFFFFF">
                                 <tbody>
-                                <tr align="center" bgcolor="#e3F4F7">
-                                    <td width="13%" bgcolor="#F9D16B">编号</td>
-                                    <td width="10%" bgcolor="#F9D16B">姓名</td>
-                                    <td width="12%" bgcolor="#F9D16B">电话</td>
-                                    <td width="5%" bgcolor="#F9D16B">修改</td>
-                                    <td width="5%" bgcolor="#F9D16B">删除</td>
-                                </tr>
 
-                                {% for read in reads %}
                                     <tr>
-                                        <td style="padding:5px;">{{ read.id }}</td>
-                                        <td style="padding:5px;"><a
-                                                href="reader.do?action=readerDetail&amp;ID=1">{{ read.rname }}</a></td>
-                                        <td align="center">{{ read.tel }}</td>
-                                        <td align="center"><a href="reader.do?action=readerModifyQuery&amp;ID=1">修改</a>
-                                        </td>
-                                        <td align="center"><a href="reader.do?action=readerDel&amp;ID=1">删除</a></td>
+                                        <td align="center">添加失败！</td>
                                     </tr>
-                                {% endfor %}
 
                                 </tbody>
                             </table>
@@ -55,4 +43,6 @@
         </tr>
         </tbody>
     </table>
+
+
 {% endblock %}

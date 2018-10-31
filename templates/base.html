@@ -1,26 +1,21 @@
 <html>
-
 <head>
     <title>图书馆管理系统</title>
-    <link href="/static/css/style.css" rel="stylesheet">
+    <link href="/static/style.css" rel="stylesheet">
 </head>
-
-
 <body onLoad="clockon(bgclock)">
-
-
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-
+{#头部#}
 {% include 'header.html' %}
 
-
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<script src="/static/js/onclock.JS" charset="gbk"></script>
-<script src="/static/js/menu.JS" charset="gbk"></script>
+<script src="/static/onclock.JS" charset="utf-8"></script>
+<script src="/static/menu.JS" charset='utf-8'></script>
 <div class=menuskin id=popmenu
      onmouseover="clearhidemenu();highlightmenu(event,'on')"
      onmouseout="highlightmenu(event,'off');dynamichide(event)" style="Z-index:100;position:absolute;"></div>
+
 <table width="778" border="0" cellspacing="0" cellpadding="0" align="center">
     <tr>
         <td valign="top" bgcolor="#FFFFFF">
@@ -29,6 +24,7 @@
                 <tr>
                     <td height="510" valign="top" style="padding:5px;">
 
+                        {#主体#}
                         {% block main %}
 
                         {% endblock %}
@@ -36,10 +32,12 @@
                     </td>
                 </tr>
             </table>
-
         </td>
     </tr>
 </table>
+
+{#底部#}
 {% include 'footer.html' %}
+
 </body>
 </html>
