@@ -59,9 +59,9 @@ def addbook(request):
         if bname and bpress and bauthor and btype and bcount:
             books = Book(bookname=bname,press=bpress,author=bauthor,type_id=btype,count=bcount)
             books.save()
-            return render(request,'successful.html')
+            return render(request,'successful1.html')
         else:
-            return render(request,'failure.html')
+            return render(request,'failure1.html')
 
 #图书类型展示
 def booktype(request):
@@ -77,9 +77,9 @@ def addtype(request):
         if tname:
             type = Type(type=tname)
             type.save()
-            return render(request,'successful.html')
+            return render(request,'successful2.html')
         else:
-            return render(request,'failure.html')
+            return render(request,'failure2.html')
 
 # 读者管理
 def reader(request):
@@ -106,9 +106,19 @@ def addread(request):
 #借阅
 def bookBorrow(request):
     if request.method == 'GET':
-        return render(request,'bookBorrow.html')
+        borrows = Record.objects.all()
+        return render(request,'bookBorrow.html',{'borrows':borrows})
     else:
-        return HttpResponse('123')
+        cont = request.POST.get('barcode','')
+        if cont:
+            reads = Reader.objects.filter(id=cont).all()
+            borrows = Record.objects.all()
+            if reads:
+                return render(request,'bookBorrow.html',{'borrows':borrows,'reads':reads})
+            else:
+                return render(request,'bookBorrow.html',{'borrows':borrows})
+        else:
+            return render(request,'bookBorrow.html')
 
 #续借
 def bookRenew(request):
@@ -118,14 +128,14 @@ def bookRenew(request):
 def bookBack(request):
     return render(request,'bookBack.html')
 
-
+# 图书查询
 def bookQuery(request):
     return render(request,'bookQuery.html')
 
-
+# 借阅查询
 def borrowQuery(request):
     return render(request,'borrowQuery.html')
 
-
+#到期提醒
 def bremind(request):
     return render(request,'bremind.html')

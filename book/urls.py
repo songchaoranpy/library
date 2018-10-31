@@ -13,6 +13,7 @@ urlpatterns = [
     url(r'booktype/', views.booktype),
     url(r'addtype/', views.addtype),
     url(r'addread/', views.addread),
+
     url(r'^bookborrow/', views.bookBorrow),
     url(r'^bookrenew/', views.bookRenew),
     url(r'^bookback/', views.bookBack),
