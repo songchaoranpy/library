@@ -190,11 +190,11 @@ var readermenu = '<table width=90><tr><td id=readerType onMouseOver=overbg(reade
 var bookmenu = '<table width=90><tr><td id=bookType onMouseOver=overbg(bookType) onMouseOut=outbg(bookType)><a href="/booktype/">图书类型设置</a></td></tr>\
 <tr><td id=book onMouseOver=overbg(book) onMouseOut=outbg(book)><a href="/bookmanage/">图书档案管理</a></td></tr>\
 </table>'
-var borrowmenu = '<table width=60><tr><td id=Borrow onMouseOver=overbg(Borrow) onMouseOut=outbg(Borrow)><a href="/bookBorrow/">图书借阅</a></td></tr>\
-<tr><td id=renew onMouseOver=overbg(renew) onMouseOut=outbg(renew)><a href=/bookRenew/>图书续借</a></td></tr>\
-<tr><td id=giveback onMouseOver=overbg(giveback) onMouseOut=outbg(giveback)><a href=/bookBack/>图书归还</a></td></tr>\
+var borrowmenu = '<table width=60><tr><td id=Borrow onMouseOver=overbg(Borrow) onMouseOut=outbg(Borrow)><a href="/bookborrow/">图书借阅</a></td></tr>\
+<tr><td id=renew onMouseOver=overbg(renew) onMouseOut=outbg(renew)><a href=/bookrenew/>图书续借</a></td></tr>\
+<tr><td id=giveback onMouseOver=overbg(giveback) onMouseOut=outbg(giveback)><a href=/bookback/>图书归还</a></td></tr>\
 </table>'
 var querymenu = '<table width=90><tr><td id=bookQuery onMouseOver=overbg(bookQuery) onMouseOut=outbg(bookQuery)><a href="/bookQuery/">图书档案查询</a></td></tr>\
-<tr><td id=borrowQuery onMouseOver=overbg(borrowQuery) onMouseOut=outbg(borrowQuery)><a href="borrowQuery.html">图书借阅查询</a></td></tr>\
-<tr><td id=givebackQuery onMouseOver=overbg(givebackQuery) onMouseOut=outbg(givebackQuery)><a href="bremind.html">借阅到期提醒</a></td></tr>\
+<tr><td id=borrowQuery onMouseOver=overbg(borrowQuery) onMouseOut=outbg(borrowQuery)><a href="/borrowQuery/">图书借阅查询</a></td></tr>\
+<tr><td id=givebackQuery onMouseOver=overbg(givebackQuery) onMouseOut=outbg(givebackQuery)><a href="/bremind/">借阅到期提醒</a></td></tr>\
 </table>'

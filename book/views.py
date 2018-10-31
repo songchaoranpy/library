@@ -117,3 +117,15 @@ def bookRenew(request):
 #归还
 def bookBack(request):
     return render(request,'bookBack.html')
+
+
+def bookQuery(request):
+    return render(request,'bookQuery.html')
+
+
+def borrowQuery(request):
+    return render(request,'borrowQuery.html')
+
+
+def bremind(request):
+    return render(request,'bremind.html')
