@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <head>
     <title>图书馆管理系统</title>
-    <link href="/static/css/style.css" rel="stylesheet">
+    <link href="/static/style.css" rel="stylesheet">
     <script language="javascript">
         function check(form) {
             if (form.name.value == "") {
@@ -23,15 +23,15 @@
 </head>
 
 <body>
-<table width="778" border="0px " align="center" cellpadding="0" cellspacing="0" bgcolor="#F9D16B" class="tableBorder">
+<table width="750" border="0px " align="center" cellpadding="0" cellspacing="0" bgcolor="#F9D16B" class="tableBorder">
 
 
-    <table width="100%" border="0px" cellspacing="0" cellpadding="0">
+    <table width="98%" border="0px" cellspacing="0" cellpadding="0">
 
 
-        <form name="form1" method="post" action="bookmanage.html">
+        <form name="form1" method="post" action="/login/">
             {% csrf_token %}
-            <table width="100%" border="0px" cellpadding="0px" cellspacing="0px" bordercolorlight="#FFFFFF"
+            <table width="98%" border="0px" cellpadding="0px" cellspacing="0px" bordercolorlight="#FFFFFF"
                    bordercolordark="#D2E3E6">
                 <tr>
                     <td height="57">&nbsp;</td>
@@ -56,10 +56,10 @@
                 </tr>
                 <tr>
                     <td height="30">&nbsp;</td>
-                    <td colspan="2" align="center">
                         <input name="Submit" type="submit" class="btn_grey" value="确定" onClick="return check(form1)">
-                        &nbsp;
+                        &nbsp;&nbsp;
                         <input name="Submit3" type="reset" class="btn_grey" value="重置">&nbsp;
+                        &nbsp;&nbsp;
                         <input name="Submit2" type="button" class="btn_grey" value="关闭" onClick="window.close();"></td>
                 </tr>
             </table>

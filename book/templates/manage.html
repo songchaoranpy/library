@@ -20,7 +20,7 @@
                                 <tr>
                                     <td width="47%">&nbsp;</td>
                                     <td width="13%">
-                                        <a href="book_add.jsp">添加图书信息</a></td>
+                                        <a href="/addbook/">添加图书信息</a></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -44,10 +44,11 @@
                                         <td style="padding:5px;">{{ book.bookname }}</td>
                                         <td style="padding:5px;">&nbsp;{{ book.press }}</td>
                                         <td style="padding:5px;">&nbsp;{{ book.author }}</td>
-                                        <td style="padding:5px;">&nbsp;{{ book.type}}</td>
+                                        <td style="padding:5px;">&nbsp;{{ book.type }}</td>
                                         <td style="padding:5px;">&nbsp;{{ book.count }}</td>
                                         <td align="center"><a href="book.do?action=bookModifyQuery&amp;ID=6">修改</a></td>
-                                        <td align="center"><a href="Book.do?action=BookDel&amp;ID={{ book.id }}">删除</a></td>
+                                        <td align="center"><a href="Book.do?action=BookDel&amp;ID={{ book.id }}">删除</a>
+                                        </td>
 
                                     </tr>
                                 {% endfor %}
